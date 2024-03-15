@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'Figtree';
+  src: url('../assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Figtree';
+  font-style: italic;
+  src: url('../assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+  --ff-figtree: 'Figtree', sans-serif;
+
+  --fw-regular: 500;
+  --fw-bold: 800;
+
+  --fs-400: 0.9rem;
+  --fs-500: 1rem;
+  --fs-800: 1.475rem;
+
+  --clr-primary-yellow: hsl(47, 88%, 63%);
+  --clr-netural-white: hsl(0, 0%, 100%);
+  --clr-netural-grey: hsl(0, 0%, 50%);
+  --clr-netural-black: hsl(0, 0%, 7%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: var(--ff-figtree);
+  font-style: normal;
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--clr-netural-black);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-500);
+  background: var(--clr-primary-yellow);
+}
+
+.card {
+  --br: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 380px;
+  padding: 20px;
+  border: 1px solid var(--clr-netural-black);
+  /* box-shadow: x-offset y-offset blur-radius spread-radius color inset; */
+  box-shadow: 8px 8px 0 var(--clr-netural-black);
+  border-radius: var(--br);
+  background: var(--clr-netural-white);
+}
+
+.card__header {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-800);
+}
+
+.card__img {
+  --br: 12px;
+
+  margin-bottom: 10px;
+  width: 100%;
+  display: block;
+  margin-inline: auto;
+  border-radius: var(--br);
+}
+
+.card__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.card__profile > h2 {
+  margin-block: 8px;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-bold);
+}
+
+.card__profile > img {
+  width: 2.2rem;
+}
+
+.card__badge {
+  --br: 5px;
+
+  width: fit-content;
+  font-weight: var(--fw-bold);
+  padding-block: 2px;
+  padding-inline: 12px;
+  color: var(--clr-netural-black);
+  border-radius: var(--br);
+  background-color: var(--clr-primary-yellow);
+}
+
+.card__content {
+  color: var(--clr-netural-grey);
+}
+
+.card p:first-of-type {
+  font-weight: 500;
+  font-size: var(--fs-400);
+}
